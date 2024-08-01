@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 // import basicSsl from '@vitejs/plugin-basic-ssl';
 
 export default defineConfig({
-  base: '/js-template',
+  base: '/js-tsdk-template',
   plugins: [
     // Allows using self-signed certificates to run the dev server using HTTPS.
     // https://www.npmjs.com/package/@vitejs/plugin-basic-ssl
