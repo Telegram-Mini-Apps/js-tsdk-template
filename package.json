@@ -1,11 +1,11 @@
 {
-  "name": "js-template",
+  "name": "js-tsdk-template",
   "description": "Telegram Mini Apps application template using JavaScript and Vite.",
   "private": true,
   "version": "0.0.1",
   "main": "index.js",
   "type": "module",
-  "homepage": "https://telegram-mini-apps.github.io/js-template",
+  "homepage": "https://telegram-mini-apps.github.io/js-tsdk-template",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "vite",
@@ -19,6 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.2.0",
+    "@twa-dev/types": "^7.0.0",
     "@types/jquery": "^3.5.30",
     "@vitejs/plugin-basic-ssl": "^1.1.0",
     "eslint": "^8.57.0",
@@ -26,7 +27,6 @@
     "vite": "^5.3.2"
   },
   "dependencies": {
-    "@telegram-apps/sdk": "^1.1.1",
     "@tonconnect/ui": "^2.0.6",
     "eruda": "^3.0.1",
     "jquery": "^3.7.1"

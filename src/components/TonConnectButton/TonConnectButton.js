@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import { classNames } from '@telegram-apps/sdk';
 
 export class TonConnectButton {
   /**
@@ -7,7 +6,7 @@ export class TonConnectButton {
    */
   constructor({ id, class: className }) {
     this.el = $('<div/>')
-      .attr('class', classNames(className))
+      .addClass(className ?? '')
       .append($('<div style="width: fit-content;"/>').attr('id', id));
   }
 

@@ -1,9 +1,12 @@
 import $ from 'jquery';
-import { isRGB } from '@telegram-apps/sdk';
 
 import { RGB } from '@/components/RGB/RGB';
 
 import './styles.css';
+
+function isRGB(value) {
+  return /^#[a-f0-9]{3,6}$/i.test(value);
+}
 
 export class DisplayData {
   /**

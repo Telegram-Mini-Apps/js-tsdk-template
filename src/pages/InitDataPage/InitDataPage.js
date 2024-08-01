@@ -30,24 +30,18 @@ export class InitDataPage extends PageComponent {
    */
   constructor(context) {
     super(new Page({ title: 'Init Data' }));
-    const {
-      launchParams: {
-        initDataRaw,
-      },
-      initData,
-    } = context;
+    const { initData: initDataRaw, initDataUnsafe: initData } = context.getWebApp();
     const initDataRows = initData && initDataRaw
       ? [
         { title: 'raw', value: initDataRaw },
-        { title: 'auth_date', value: initData.authDate.toLocaleString() },
-        { title: 'auth_date (raw)', value: initData.authDate.getTime() / 1000 },
+        { title: 'auth_date', value: new Date(initData.auth_date * 1000).toLocaleString() },
+        { title: 'auth_date (raw)', value: initData.auth_date },
         { title: 'hash', value: initData.hash },
-        { title: 'can_send_after', value: initData.canSendAfterDate?.toISOString() },
-        { title: 'can_send_after (raw)', value: initData.canSendAfter },
-        { title: 'query_id', value: initData.queryId },
-        { title: 'start_param', value: initData.startParam },
-        { title: 'chat_type', value: initData.chatType },
-        { title: 'chat_instance', value: initData.chatInstance },
+        { title: 'can_send_after', value: initData.can_send_after },
+        { title: 'query_id', value: initData.query_id },
+        { title: 'start_param', value: initData.start_param },
+        { title: 'chat_type', value: initData.chat_type },
+        { title: 'chat_instance', value: initData.chat_instance },
       ] : undefined;
     const userRows = initData && initData.user
       ? getUserRows(initData.user)
@@ -61,7 +55,7 @@ export class InitDataPage extends PageComponent {
         { title: 'title', value: initData.chat.title },
         { title: 'type', value: initData.chat.type },
         { title: 'username', value: initData.chat.username },
-        { title: 'photo_url', value: initData.chat.photoUrl },
+        { title: 'photo_url', value: initData.chat.photo_url },
       ]
       : undefined;
 

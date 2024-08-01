@@ -7,7 +7,7 @@ This template demonstrates how developers can implement an application on the Te
 Mini Apps platform using the following technologies and libraries
 
 - [TON Connect](https://docs.ton.org/develop/dapps/ton-connect/overview)
-- [@telegram-apps SDK](https://docs.telegram-mini-apps.com/packages/telegram-apps-sdk)
+- [Telegram SDK](https://core.telegram.org/bots/webapps#initializing-mini-apps)
 - [Vite](https://vitejs.dev/)
 
 > This boilerplate was created using [pnpm](https://pnpm.io/). Therefore, it is required to use
@@ -62,10 +62,10 @@ After this, you will see a similar message in your terminal:
 ```bash
 VITE v5.2.12  ready in 237 ms
 
-➜  Local:   http://localhost:5173/js-template
-➜  Network: http://172.18.16.1:5173/js-template
-➜  Network: http://172.19.32.1:5173/js-template
-➜  Network: http://192.168.0.171:5173/js-template
+➜  Local:   http://localhost:5173/js-tsdk-template
+➜  Network: http://172.18.16.1:5173/js-tsdk-template
+➜  Network: http://172.19.32.1:5173/js-tsdk-template
+➜  Network: http://192.168.0.171:5173/js-tsdk-template
 ➜  press h + enter to show help
 ```
 
@@ -73,9 +73,9 @@ Here, you can see the `Local` link, available locally, and `Network` links acces
 devices in the same network with the current device.
 
 To view the application, you need to open the `Local`
-link (`http://localhost:5173/js-template` in this example) in your browser.
+link (`http://localhost:5173/js-tsdk-template` in this example) in your browser.
 
-It is important to note that some libraries in this template, such as `@telegram-apps/sdk`, are not
+It is important to note that some libraries in this template, such as Telegram SDK, are not
 intended for use outside of Telegram.
 
 Nevertheless, they appear to function properly. This is because the `src/mockEnv.ts` file, which is
@@ -104,14 +104,14 @@ After uncommenting the function, run the `dev` script again and observe the outp
 ```bash
 VITE v5.2.12  ready in 265 ms
 
-➜  Local:   https://localhost:5173/js-template
-➜  Network: https://172.18.16.1:5173/js-template
-➜  Network: https://172.19.32.1:5173/js-template
-➜  Network: https://192.168.0.171:5173/js-template
+➜  Local:   https://localhost:5173/js-tsdk-template
+➜  Network: https://172.18.16.1:5173/js-tsdk-template
+➜  Network: https://172.19.32.1:5173/js-tsdk-template
+➜  Network: https://192.168.0.171:5173/js-tsdk-template
 ➜  press h + enter to show help
 ```
 
-Visiting the `Local` link (`https://localhost:5173/js-template` in this example) in your
+Visiting the `Local` link (`https://localhost:5173/js-tsdk-template` in this example) in your
 browser, you will see the following warning:
 
 ![SSL Warning](assets/ssl-warning.png)

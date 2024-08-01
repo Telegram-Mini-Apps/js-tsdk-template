@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import { classNames } from '@telegram-apps/sdk';
 
 import { Link } from '@/components/Link/Link';
 
@@ -14,7 +13,8 @@ export class WalletProvider {
     this.img = $('<img class="wallet-provider__image" height="60" width="60">')
       .attr('alt', 'Provider logo');
     this.el = $('<div/>')
-      .attr('class', classNames(className, 'wallet-provider'))
+      .attr('class', 'wallet-provider')
+      .addClass(className ?? '')
       .attr('style', 'display: none;');
   }
 

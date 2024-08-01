@@ -1,4 +1,3 @@
-import { classNames } from '@telegram-apps/sdk';
 import $ from 'jquery';
 
 import './styles.css';
@@ -9,7 +8,8 @@ export class RGB {
    */
   constructor({ color, class: className }) {
     this.el = $('<span/>')
-      .attr('class', classNames('rgb', className))
+      .attr('class', 'rgb')
+      .addClass(className ?? '')
       .append(
         $(`<i class="rgb__icon" style="background-color: ${color}"/>`),
         color,

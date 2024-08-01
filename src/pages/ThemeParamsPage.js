@@ -25,7 +25,7 @@ export class ThemeParamsPage extends PageComponent {
 
   computeRows() {
     return Object
-      .entries(this.context.themeParams.getState())
+      .entries(this.context.getWebApp().themeParams.getState())
       .map(([title, value]) => ({
         title: title
           .replace(/[A-Z]/g, (m) => `_${m.toLowerCase()}`)
@@ -39,10 +39,10 @@ export class ThemeParamsPage extends PageComponent {
   };
 
   init() {
-    this.context.themeParams.on('change', this.onThemeChange);
+    this.context.getWebApp().themeParams.on('change', this.onThemeChange);
   }
 
   destroy() {
-    this.context.themeParams.off('change', this.onThemeChange);
+    this.context.getWebApp().themeParams.off('change', this.onThemeChange);
   }
 }

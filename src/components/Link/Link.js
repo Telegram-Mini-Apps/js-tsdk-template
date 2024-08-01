@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import { classNames } from '@telegram-apps/sdk';
 
 import { filterChildren } from '@/utils/filterChildren';
 
@@ -17,13 +16,14 @@ export class Link {
       || targetUrl.host !== currentUrl.host;
 
     this.el = $('<a/>')
-      .attr('class', classNames('link', className))
-      .attr('href', isExternal ? href : context.navigator.renderPath(href));
+      .attr('class', 'link')
+      .addClass(className ?? '')
+      .attr('href', isExternal ? href : `#${href}`);
 
     if (isExternal) {
       this.el.on('click', (e) => {
         e.preventDefault();
-        context.utils.openLink(targetUrl.toString());
+        context.getWebApp().openLink(targetUrl.toString());
       });
     }
   }

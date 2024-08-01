@@ -7,7 +7,7 @@ import './styles.css';
 
 export class Page {
   /**
-   * @param {{ title: string}}
+   * @param {{title: string}}
    */
   constructor({ title }) {
     this.el = $('<div class="page"/>').append($('<h1/>').text(title));
