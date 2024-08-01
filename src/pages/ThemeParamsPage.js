@@ -25,7 +25,7 @@ export class ThemeParamsPage extends PageComponent {
 
   computeRows() {
     return Object
-      .entries(this.context.getWebApp().themeParams.getState())
+      .entries(this.context.getWebApp().themeParams)
       .map(([title, value]) => ({
         title: title
           .replace(/[A-Z]/g, (m) => `_${m.toLowerCase()}`)
