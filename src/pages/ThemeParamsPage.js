@@ -39,10 +39,10 @@ export class ThemeParamsPage extends PageComponent {
   };
 
   init() {
-    this.context.getWebApp().themeParams.on('change', this.onThemeChange);
+    this.context.getWebApp().onEvent('themeChanged', this.onThemeChange);
   }
 
   destroy() {
-    this.context.getWebApp().themeParams.off('change', this.onThemeChange);
+    this.context.getWebApp().offEvent('themeChanged', this.onThemeChange);
   }
 }
