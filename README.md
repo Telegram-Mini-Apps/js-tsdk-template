@@ -78,12 +78,6 @@ link (`http://localhost:5173/js-tsdk-template` in this example) in your browser.
 It is important to note that some libraries in this template, such as Telegram SDK, are not
 intended for use outside of Telegram.
 
-Nevertheless, they appear to function properly. This is because the `src/mockEnv.ts` file, which is
-imported in the application's entry point (`src/index.ts`), employs the `mockTelegramEnv` function
-to simulate the Telegram environment. This trick convinces the application that it is running in a
-Telegram-based environment. Therefore, be cautious not to use this function in production mode
-unless you fully understand its implications.
-
 ### Run Inside Telegram
 
 Although it is possible to run the application outside of Telegram, it is recommended to develop it
